@@ -1,0 +1,23 @@
+body {
+    background-color: #4a4a52;
+}
+
+.sign {
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.mascot {
+    width: 400px;
+    height: 400px;
+    background: url('./tree.gif');
+    background-size: contain;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+
+
+/* #DD4A48 */
