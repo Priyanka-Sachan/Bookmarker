@@ -2,6 +2,12 @@ body {
     background-color: #4a4a52;
 }
 
+.bookmark {
+    background-color: #F5EEDC;
+    max-width: 256px;
+    margin: 8px;
+}
+
 .sign {
     width: 400px;
     height: 400px;
