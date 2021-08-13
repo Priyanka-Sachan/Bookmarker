@@ -76,20 +76,26 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="add-bookmark-form" class="needs-validation" novalidate>
                         <div class="mb-3">
-                            <label for="name" class="form-label">Website name</label>
-                            <input type="text" class="form-control" id="name" aria-describedby="name">
+                            <label for="w_name" class="form-label">Website name</label>
+                            <input type="text" class="form-control" id="w_name" aria-describedby="name" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid website name.
+                            </div>
                         </div>
                         <div class="mb-3">
-                            <label for="url" class="form-label">URL</label>
-                            <input type="url" class="form-control" id="url">
+                            <label for="w_url" class="form-label">URL</label>
+                            <input type="url" class="form-control" id="w_url" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid url.
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="note" class="form-label">Note</label>
                             <input type="text" class="form-control" id="note">
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button id="add_bookmark" type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
             </div>
@@ -97,7 +103,7 @@
     </div>
     <div class="sign">
         <!-- Button trigger modal -->
-        <button type="button" id="add_bookmark" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" id="show_modal" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Add bookmark
       </button>
         <div class="mascot"></div>
