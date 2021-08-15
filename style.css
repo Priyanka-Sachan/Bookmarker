@@ -2,6 +2,21 @@ body {
     background-color: #4a4a52;
 }
 
+a:hover,
+a:visited,
+a:link,
+a:active {
+    color: black;
+    text-decoration: none;
+}
+
+.close-icon {
+    position: relative;
+    top: 6px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
 .bookmark {
     background-color: #F5EEDC;
     max-width: 256px;
