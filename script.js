@@ -27,13 +27,13 @@ deleteBookmark = (url) => {
         }
     });
     localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
-    fetchBookmarks();
+    location.reload();
 }
 
 // Build bookmarks DOM
 buildBookmarks = () => {
     //Remove all previous bookmarks
-    bookmarksSection.textContent = '';
+    // bookmarksSection.textContent = '';
     bookmarks.forEach((bookmark) => {
         const { wName, wUrl, note } = bookmark;
         const card = document.createElement('div');
@@ -44,10 +44,12 @@ buildBookmarks = () => {
         const cardLink = document.createElement('a');
         cardLink.setAttribute('href', wUrl);
         cardLink.setAttribute('target', '_blank');
+        const icon = document.createElement('img');
+        icon.setAttribute('src', `http://s2.googleusercontent.com/s2/favicons?domain_url=${wUrl}`);
         const cardTitle = document.createElement('h5');
         cardTitle.classList.add('card-title');
         cardTitle.innerText = wName;
-        cardLink.append(cardTitle);
+        cardLink.append(icon, cardTitle);
         const cardSubtitle = document.createElement('h6');
         cardSubtitle.classList.add('card-subtitle');
         cardSubtitle.classList.add('mb-2');

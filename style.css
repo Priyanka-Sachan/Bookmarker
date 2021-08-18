@@ -1,5 +1,7 @@
 body {
     background-color: #4a4a52;
+    width: 100vw;
+    height: 100vh;
 }
 
 a:hover,
@@ -23,21 +25,43 @@ a:active {
     margin: 8px;
 }
 
+.card-title {
+    display: inline;
+    margin: 8px;
+}
+
+.card-body {
+    padding: 8px;
+}
+
+#show_modal {
+    width: 240px;
+}
+
 .sign {
-    width: 400px;
-    height: 400px;
-    position: fixed;
-    right: 0;
-    bottom: 0;
+    max-width: 256px;
+    margin: 8px;
 }
 
 .mascot {
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
     background: url('./tree.gif');
-    background-size: contain;
-    background-position: right bottom;
+    background-size: cover;
     background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #F06060;
 }
 
 
